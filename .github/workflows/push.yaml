@@ -13,8 +13,8 @@ jobs:
       - run: npm install
       - run: npm lint
       - run: npm test
-    name: Publish to Docker Repository
-      - uses: elgohr/Publish-Docker-Github-Action@master
+      - name: Publish to Docker Repository
+        uses: elgohr/Publish-Docker-Github-Action@master
         with:
           name: anatoliche/node_rest_api_nofw
           username: ${{ secrets.DOCKER_USERNAME }}
